@@ -1,0 +1,44 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 2016/06/22, 16:56:07
+    Author     : tsukasa
+*/
+header .title {
+  color: white; }
+
+.panel .panel-heading h3 {
+  margin: 0; }
+
+.panel.panel-under-tab {
+  border-top: none;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0; }
+
+.panel.panel-search .age {
+  display: inline;
+  width: 10rem; }
+
+.trim {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis; }
+
+/*--------------------------------------------------------------------------------
+	informations
+--------------------------------------------------------------------------------*/
+.table.table-information .files .file {
+  margin-bottom: 0.5rem; }
+.table.table-information .files img {
+  max-width: 100px; }
+
+/*--------------------------------------------------------------------------------
+	engineers
+--------------------------------------------------------------------------------*/
+.table.table-view .file img {
+  max-width: 800px; }
+
+/*# sourceMappingURL=style.css.map */
