@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*
 To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
@@ -40,5 +41,13 @@ header .title {
 --------------------------------------------------------------------------------*/
 .table.table-view .file img {
   max-width: 800px; }
+
+.table.table-comments div.trim {
+  width: 40rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  /* Opera9,10対応 */ }
 
 /*# sourceMappingURL=style.css.map */
