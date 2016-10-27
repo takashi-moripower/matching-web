@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /*
 To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
@@ -14,6 +13,9 @@ header .title {
 .panel .panel-heading h3 {
   margin: 0; }
 
+.panel.panel-primary .panel-heading a {
+  color: white; }
+
 .panel.panel-under-tab {
   border-top: none;
   border-top-right-radius: 0;
@@ -27,6 +29,15 @@ header .title {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis; }
+  .trim.trim20 {
+    max-width: 20rem;
+    width: 20rem; }
+  .trim.trim40 {
+    max-width: 40rem;
+    width: 40rem; }
+  .trim.trim80 {
+    max-width: 80rem;
+    width: 80rem; }
 
 /*--------------------------------------------------------------------------------
 	informations
@@ -42,12 +53,71 @@ header .title {
 .table.table-view .file img {
   max-width: 800px; }
 
-.table.table-comments div.trim {
-  width: 40rem;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  /* Opera9,10対応 */ }
+/*--------------------------------------------------------------------------------
+	comments
+--------------------------------------------------------------------------------*/
+.panel.comments .panel-body {
+  max-height: 40rem;
+  overflow: auto; }
+
+.comment {
+  padding: 1rem 2rem; }
+  .comment .comment-body {
+    display: inline-block;
+    border: 1px solid gray;
+    padding: 1rem;
+    text-align: left;
+    border-radius: 1rem;
+    position: relative;
+    background-color: white; }
+    .comment .comment-body img {
+      max-width: 100%; }
+    .comment .comment-body:before {
+      width: 0;
+      height: 0;
+      content: '';
+      border-top: 0.75rem solid transparent;
+      border-bottom: 0.75rem solid transparent;
+      position: absolute;
+      bottom: 1rem; }
+    .comment .comment-body:after {
+      width: 0;
+      height: 0;
+      content: '';
+      border-top: 0.75rem solid transparent;
+      border-bottom: 0.75rem solid transparent;
+      position: absolute;
+      bottom: 1rem; }
+    .comment .comment-body .comment-time {
+      position: absolute;
+      bottom: 1rem;
+      margin-left: 1rem;
+      margin-right: 1rem;
+      width: 8rem; }
+  .comment.comment-left .comment-body {
+    float: left;
+    margin-right: 10rem; }
+    .comment.comment-left .comment-body:before {
+      border-right: 1rem solid gray;
+      left: -1rem; }
+    .comment.comment-left .comment-body:after {
+      border-right: 1rem solid white;
+      left: -0.9rem; }
+    .comment.comment-left .comment-body .comment-time {
+      left: 100%; }
+  .comment.comment-right .comment-body {
+    float: right;
+    margin-left: 10rem; }
+    .comment.comment-right .comment-body:before {
+      border-left: 1rem solid gray;
+      right: -1rem; }
+    .comment.comment-right .comment-body:after {
+      border-left: 1rem solid white;
+      right: -0.9rem; }
+    .comment.comment-right .comment-body .comment-time {
+      right: 100%; }
+
+.new-comment textarea {
+  height: 6rem; }
 
 /*# sourceMappingURL=style.css.map */

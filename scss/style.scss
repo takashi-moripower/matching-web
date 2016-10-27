@@ -20,6 +20,10 @@ header .title{
 	}	
 }
 
+.panel.panel-primary .panel-heading a{
+	color:white;
+}
+
 .panel.panel-under-tab{
 	border-top:none;
 	border-top-right-radius:0;
@@ -37,6 +41,18 @@ header .title{
 	overflow: hidden;
 	white-space: nowrap;
 	text-overflow: ellipsis;	
+	&.trim20{
+		max-width:20rem;
+		width:20rem;
+	}
+	&.trim40{
+		max-width:40rem;
+		width:40rem;
+	}
+	&.trim80{
+		max-width:80rem;
+		width:80rem;
+	}
 }
 
 /*--------------------------------------------------------------------------------
@@ -61,10 +77,105 @@ header .title{
 	}
 }
 
-.table.table-comments div.trim{
-	width:40rem;
-	white-space: nowrap;
-	overflow: hidden;
-	text-overflow: ellipsis;
-	-o-text-overflow: ellipsis; /* Opera9,10対応 */	
+/*--------------------------------------------------------------------------------
+	comments
+--------------------------------------------------------------------------------*/
+.panel.comments{
+	.panel-body{
+		max-height:40rem;
+		overflow:auto;
+	}
 }
+.comment{
+	$bg-color:white;
+
+	$border-color:gray;
+	$border-radius:1rem;
+	$baloon-width:1rem;
+	$baloon-height:.75rem;
+
+	padding:1rem 2rem;
+
+	.comment-body{
+		display:inline-block;
+		border:1px solid $border-color;
+		padding:$border-radius;
+		text-align:left;
+		border-radius:$border-radius;
+		position:relative;
+		background-color:$bg-color;
+
+		img{
+			max-width:100%;
+		}
+
+		&:before{
+			width:0;
+			height:0;
+			content:'';
+			border-top:$baloon-height solid transparent;
+			border-bottom:$baloon-height solid transparent;
+			position:absolute;
+			bottom:$border-radius;
+		}
+		&:after{
+			width:0;
+			height:0;
+			content:'';
+			border-top:$baloon-height solid transparent;
+			border-bottom:$baloon-height solid transparent;
+			position:absolute;
+			bottom:$border-radius;
+		}
+		.comment-time{
+			position:absolute;
+			bottom:1rem;
+			margin-left:1rem;
+			margin-right:1rem;
+			width:8rem;
+		}
+	}
+
+
+	&.comment-left{
+		.comment-body{
+			&:before{
+				border-right:$baloon-width solid $border-color;
+				left:-$baloon-width;
+			}
+
+			&:after{
+				border-right:$baloon-width solid $bg-color;
+				left:-$baloon-width * 0.9;
+			}
+			.comment-time{
+				left:100%;
+			}
+			float:left;
+			margin-right:10rem;
+		}
+	}
+	&.comment-right{
+		.comment-body{
+			&:before{
+				border-left:$baloon-width solid $border-color;
+				right:-$baloon-width;
+			}
+
+			&:after{
+				border-left:$baloon-width solid $bg-color;
+				right:-$baloon-width * 0.9;
+			}
+			.comment-time{
+				right:100%;
+			}
+			float:right;
+			margin-left:10rem;
+		}
+	}
+}
+
+.new-comment textarea{
+	height:6rem;
+}
+
